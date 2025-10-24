@@ -80,9 +80,9 @@
     </footer>
 
     <script>
-    // Javascript/JQuery Implementation
+    
     $(document).ready(function(){
-        // 1. Animasi Typing di Hero Section (JS Murni)
+        
         const titleText = "Satu Toko, Semua Beres: Solusi Packaging dan Goodie Bag Terlengkap di Malang.";
         const titleElement = document.getElementById('hero-title');
         let i = 0;
@@ -95,17 +95,17 @@
         }
         typeWriter();
 
-        // 2. Carousel Produk Unggulan (JQuery)
+        
         const products = [
             { name: "Tas Kain / Goodie Bag", desc: "Berbagai ukuran, polos hingga custom sablon untuk event.", img: "img/tas_kain.jpg" },
             { name: "Kardus & Kotak Siap Pakai", desc: "Box Botol, Box Arsip, dan Sheet Packing siap kirim.", img: "img/kardus_box.jpg" },
             { name: "Logistik & Pengaman (Lakban)", desc: "Lakban kuat berbagai ukuran untuk menutup kemasan kardus.", img: "img/lakban.jpg" }
         ];
 
-        // Inject HTML Carousel - MENGGUNAKAN VARIABEL GAMBAR ${p.img}
+        
         products.forEach(p => {
             $('#product-carousel').append(
-                // Tambahkan INLINE STYLE PADA CARD yang di-inject
+        
                 `<div class="usp-card carousel-item" style="flex: 1 1 30%; max-width: 300px;"> 
                     <img src="${p.img}" alt="${p.name}"> 
                     
@@ -119,4 +119,5 @@
     });
     </script>
 </body>
+
 </html>
