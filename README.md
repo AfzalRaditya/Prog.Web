@@ -29,7 +29,7 @@ Program ini diimplementasikan dalam 3 halaman utama dengan fitur-fitur interakti
 
 -----
 
-## 🛠️ Persyaratan dan Implementasi Teknologi
+##  Persyaratan dan Implementasi Teknologi
 
 Program ini dibangun dengan ketentuan **tidak menggunakan *framework* CSS** (seperti Bootstrap) dan mengimplementasikan minimal satu fungsi dari setiap *client-side* dan *server-side script*.
 
@@ -51,6 +51,6 @@ Program ini dibangun dengan ketentuan **tidak menggunakan *framework* CSS** (sep
 
 -----
 
-## 👨‍💻 Kontributor
+## Kontributor
 
 Proyek ini dikembangkan oleh [Afzal Raditya Dharma/202310370311236] sebagai tugas pemrograman web.
