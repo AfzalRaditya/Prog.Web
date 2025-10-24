@@ -1,4 +1,4 @@
-/* style.css */
+
 :root {
     --primary-color: #007bff;
     --accent-color: #ffc107;
@@ -15,7 +15,7 @@ body {
     background-color: white;
 }
 
-/* --- HEADER & NAVIGASI --- */
+
 header {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -51,7 +51,7 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-/* --- HERO SECTION --- */
+
 .hero {
     background: var(--bg-light);
     text-align: center;
@@ -85,7 +85,7 @@ nav a:hover {
     background-color: #e0a800;
 }
 
-/* --- SECTION UMUM --- */
+
 .section {
     padding: 60px 5%;
     text-align: center;
@@ -97,9 +97,6 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-/* ----------------------------------------------------- */
-/* --- PERBAIKAN FLEXXBOX UNTUK KARTU USP/PRODUK --- */
-/* ----------------------------------------------------- */
 .usp-container {
     display: flex; 
     justify-content: space-between; 
@@ -116,7 +113,6 @@ nav a:hover {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     
-    /* Properti Flex yang memaksa 3 sejajar */
     flex: 0 0 calc(33.33% - 20px); 
     min-width: 280px; 
     
@@ -136,7 +132,6 @@ nav a:hover {
     font-size: 20px;
 }
 
-/* Styling Gambar di USP/Carousel (Perbaikan Tumpah) */
 .usp-card img {
     max-width: 100%; 
     height: auto;
@@ -146,7 +141,6 @@ nav a:hover {
     display: block; 
 }
 
-/* --- FOOTER --- */
 footer {
     background-color: #2c3e50;
     color: white;
@@ -173,7 +167,6 @@ footer a {
     font-size: 24px;
 }
 
-/* --- ABOUT US Halaman Khusus --- */
 .about-content {
     display: flex;
     gap: 50px;
@@ -185,7 +178,6 @@ footer a {
     flex: 1;
 }
 
-/* ACCORDION di About Us */
 .accordion-header {
     background: white;
     padding: 15px;
@@ -207,7 +199,6 @@ footer a {
 }
 
 
-/* --- PRODUK Halaman Khusus --- */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -259,4 +250,5 @@ footer a {
     font-size: 18px;
     font-weight: bold;
     color: var(--primary-color);
+
 }
