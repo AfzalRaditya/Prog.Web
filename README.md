@@ -1,10 +1,10 @@
 # Pro.Web
 Tugas Company Profile
 
- Muktijaya1: Your Packaging Solution
- Fitur Utama Website
+ ### Muktijaya1: Your Packaging Solution
+ ### Fitur Utama Website
 
-Program ini diimplementasikan dalam 3 halaman utama dengan fitur-fitur interaktif yang lengkap:
+Program ini diimplementasikan dalam 3 halaman utama dengan fitur-fitur interaktif :
 
 ### Halaman Beranda (`index.html`)
 
@@ -53,4 +53,4 @@ Program ini dibangun dengan ketentuan **tidak menggunakan *framework* CSS** (sep
 
 ## 👨‍💻 Kontributor
 
-Proyek ini dikembangkan oleh [Nama/NIM Anda] sebagai tugas pemrograman web.
+Proyek ini dikembangkan oleh [Afzal Raditya Dharma/202310370311236] sebagai tugas pemrograman web.
