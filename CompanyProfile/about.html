@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Muktijaya1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>MUKTIJAYA1</h1>
+            <p>Your Packaging Solution</p>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">Tentang Kami</a>
+            <a href="product.php">Produk & Katalog</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <h3>Tentang PT. Muktijaya Solusi Kemasan</h3>
+            
+            <div class="about-content">
+                <div class="our-story">
+                    <img src="img\kantor.jpg" alt="Kantor Muktijaya1" style="width: 100%; border-radius: 8px; margin-bottom: 20px;">
+                    <h4>Kisah Kami</h4>
+                    <p>Berdiri di jantung kota Malang, Muktijaya1 hadir sebagai respons atas kebutuhan mendesak UMKM dan penyelenggara acara akan solusi pengemasan yang cepat, lengkap, dan terjangkau. Kami percaya bahwa kemasan yang baik tidak harus mahal, dan ketersediaan stok adalah kunci sukses bisnis Anda. Kami bermula dari penyedia kardus lokal dan kini bertransformasi menjadi penyedia solusi 3-in-1: Tas Kain, Kardus, dan Logistik.</p>
+                </div>
+
+                <div class="vision-mission">
+                    <h4>Visi Kami</h4>
+                    <p>Menjadi penyedia solusi *packaging* terlengkap dan tercepat di Malang Raya, menjadi mitra utama yang selalu diandalkan oleh UMKM dan bisnis dalam setiap kebutuhan kemasan dan *goodie bag* mereka.</p>
+                    
+                    <h4>Misi Kami</h4>
+                    <ul>
+                        <li>Menyediakan Solusi Terlengkap: Menyediakan ragam produk kemasan (Kardus, Tas Kain/Spunbond, Lakban) dalam satu tempat (*one-stop shopping*).</li>
+                        <li>Mengutamakan Ketersediaan dan Kecepatan: Menjamin stok produk populer selalu tersedia dan memprioritaskan layanan pengiriman cepat.</li>
+                        <li>Harga Terbaik untuk Kualitas Terbaik: Memberikan penawaran harga yang sangat kompetitif tanpa mengorbankan kualitas produk.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section" style="text-align: left; background: var(--bg-light); margin-top: 50px;">
+                <h3>Detail Keunggulan Kami</h3>
+                <div class="accordion">
+                    <h4 class="accordion-header" style="cursor: pointer; background: white; padding: 15px; border: 1px solid #ddd;">&#9654; One-Stop Solution</h4>
+                    <div class="accordion-content" style="display: none; padding: 15px; border: 1px solid #ddd; border-top: none;">
+                        <p>Tidak perlu lagi mencari ke tiga toko berbeda. Kami menyediakan Tas Spunbond untuk event, berbagai jenis Kardus untuk delivery, dan Lakban pengaman, semuanya tersedia di Gudang Malang kami.</p>
+                    </div>
+                    
+                    <h4 class="accordion-header" style="cursor: pointer; background: white; padding: 15px; border: 1px solid #ddd; margin-top: 10px;">&#9654; Komitmen Ketersediaan Stok</h4>
+                    <div class="accordion-content" style="display: none; padding: 15px; border: 1px solid #ddd; border-top: none;">
+                        <p>Kami memonitor produk fast-moving dan menjamin ketersediaannya. Kebutuhan mendadak untuk acara atau pengiriman besar tidak akan menjadi masalah lagi bagi Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        </footer>
+
+    <script>
+    // JQuery Implementation: Accordion
+    $(document).ready(function(){
+        $(".accordion-header").click(function(){
+            // Menutup semua konten kecuali yang diklik
+            $(".accordion-content").not($(this).next()).slideUp(300);
+            
+            // Mengganti ikon (opsional)
+            $(".accordion-header").html(function(i, html){
+                return html.replace("▼", "&#9654;");
+            });
+
+            // Membuka/Menutup konten yang diklik
+            $(this).next().slideToggle(300);
+
+            // Mengganti ikon header yang diklik
+            if($(this).next().is(":visible")){
+                 $(this).html($(this).html().replace("&#9654;", "▼"));
+            } else {
+                $(this).html($(this).html().replace("▼", "&#9654;"));
+            }
+        });
+    });
+    </script>
+</body>
+</html>
