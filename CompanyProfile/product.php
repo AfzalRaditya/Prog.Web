@@ -1,9 +1,9 @@
 <?php
-// product.php
+
 $message = '';
 $error = '';
 
-// Data Produk Sederhana (simulasi data dinamis)
+
 $products = [
     1 => ['name' => 'Tas Kain / Goodie Bag', 'desc' => 'Spunbond & Non-Woven untuk event, polos hingga sablon custom.', 'min_order' => 100, 'base_price' => 1500],
     2 => ['name' => 'Kardus & Kotak Siap Pakai', 'desc' => 'Box Botol, Box Arsip, dan Sheet Packing siap kirim.', 'min_order' => 50, 'base_price' => 3000],
@@ -11,7 +11,7 @@ $products = [
     4 => ['name' => 'Tas Makanan & Hajatan', 'desc' => 'Tas khusus Box Nasi. Sangat populer untuk acara lokal.', 'min_order' => 100, 'base_price' => 2000]
 ];
 
-// --- IMPLEMENTASI PHP: Memproses Formulir Konsultasi ---
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_consult'])) {
     $nama = htmlspecialchars($_POST['nama']);
     $email = htmlspecialchars($_POST['email']);
@@ -19,13 +19,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_consult'])) {
     $jenis_produk = htmlspecialchars($_POST['jenis_produk']);
     $pesan = htmlspecialchars($_POST['pesan']);
 
-    // Validasi Sisi Server Minimal
+    
     if (empty($nama) || empty($email) || empty($phone)) {
         $error = "Semua kolom wajib diisi!";
     } else {
-        // Simulasi pengiriman data berhasil
+        
         $message = "Terima kasih, $nama! Pesan Anda telah kami terima. Kami akan segera menghubungi Anda melalui $phone.";
-        $_POST = array(); // Membersihkan data POST
+        $_POST = array(); 
     }
 }
 ?>
@@ -179,9 +179,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_consult'])) {
     </footer>
 
     <script>
-    // --- IMPLEMENTASI JAVASCRIPT/JQUERY ---
+    
 
-    // 1. Kalkulator Estimasi (JS Murni)
     function calculateEstimasi() {
         const jenisHarga = parseFloat(document.getElementById('jenis').value);
         const panjang = parseFloat(document.getElementById('panjang').value);
@@ -191,13 +190,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_consult'])) {
         const resultDiv = document.getElementById('estimasi-result');
 
         if (panjang > 0 && lebar > 0 && tinggi > 0 && qty >= 50 && jenisHarga > 0) {
-            // Logika Estimasi Sederhana
+            
             const luasPermukaan = 2 * (panjang * lebar + panjang * tinggi + lebar * tinggi) / 1000;
             const qtyMultiplier = qty > 500 ? 0.95 : 1.0; 
             const hargaPerPcs = jenisHarga + (luasPermukaan * 50); 
             const totalEstimasi = Math.round(hargaPerPcs * qty * qtyMultiplier);
 
-            // Format Rupiah (JS)
+            
             const formatter = new Intl.NumberFormat('id-ID', {
                 style: 'currency',
                 currency: 'IDR',
@@ -211,21 +210,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_consult'])) {
     }
 
 
-    // 2. Validasi Formulir Konsultasi (JQuery)
+    
     $(document).ready(function(){
         $("#consult-form").submit(function(e) {
             const email = $("#email").val();
             const phone = $("#phone").val();
             let isValid = true;
 
-            // Regex untuk Email Sederhana
+            
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 alert("Format email tidak valid.");
                 isValid = false;
             }
 
-            // Regex untuk Nomor Telepon (memastikan hanya angka, minimal 8 digit)
+            
             const phoneRegex = /^\d{8,15}$/;
             if (!phoneRegex.test(phone)) {
                 alert("Nomor Telepon/WA harus berupa angka dan minimal 8 digit.");
@@ -233,10 +232,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_consult'])) {
             }
 
             if (!isValid) {
-                e.preventDefault(); // Mencegah submit ke PHP jika validasi gagal
+                e.preventDefault(); 
             }
         });
     });
     </script>
 </body>
+
 </html>
