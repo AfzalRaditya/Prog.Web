@@ -66,21 +66,21 @@
         </footer>
 
     <script>
-    // JQuery Implementation: Accordion
+    
     $(document).ready(function(){
         $(".accordion-header").click(function(){
-            // Menutup semua konten kecuali yang diklik
+            
             $(".accordion-content").not($(this).next()).slideUp(300);
             
-            // Mengganti ikon (opsional)
+            
             $(".accordion-header").html(function(i, html){
                 return html.replace("▼", "&#9654;");
             });
 
-            // Membuka/Menutup konten yang diklik
+            
             $(this).next().slideToggle(300);
 
-            // Mengganti ikon header yang diklik
+            
             if($(this).next().is(":visible")){
                  $(this).html($(this).html().replace("&#9654;", "▼"));
             } else {
@@ -90,4 +90,5 @@
     });
     </script>
 </body>
+
 </html>
